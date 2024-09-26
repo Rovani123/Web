@@ -1,0 +1,29 @@
+1)
+Não são a mesma coisa.Internet é a rede de computadores. 
+Já a web é um serviço que opera na internet, uma rede de paginas que ficam em servidores e são acessados por navegadores.
+
+2)
+O cliente pede uma requisição para um servidor, utilizando um navegador
+O servidor retorna pro cliente a pagina que ele solicitou através de um arquivo html
+
+3)
+são marcadores utilizados para construir uma pagina web, ela tem um começo e fim.
+
+4)
+Html é uma liguagem de marcação para fazer paginas na web
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+5)??
+
+6)coloque a tag span para criar um paragrafo e coloque a tag "a" para colocar link em um texto
+<span><a href="https://www.google.com">texto do paragrafo</a></span>
+
