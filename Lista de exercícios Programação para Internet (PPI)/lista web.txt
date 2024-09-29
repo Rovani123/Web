@@ -22,7 +22,10 @@ Html é uma liguagem de marcação para fazer paginas na web
 </body>
 </html>
 
-5)??
+5)
+são tags cujo nome tem relção com o sua função
+exemplo: <table> cuja função é criar uma tabela
+tag não semantica: <span> cujo nome não tem nada a ver com criar paragrafo
 
 6)coloque a tag span para criar um paragrafo e coloque a tag "a" para colocar link em um texto
 <span><a href="https://www.google.com">texto do paragrafo</a></span>
