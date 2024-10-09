@@ -6,29 +6,34 @@
     <title>Lista</title>
     <style>
         *{margin: 0px;padding: 0px;}
+        h1,h2,p,span,li{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
         div{
             display: inline-block;
             height: 100vh;
             vertical-align: top;
         }
         #outroLado{
-            width: 300px;
+            margin-left: 3px;
+            width: 150vh
         }
         #canto{
             background-color: rgb(50, 50, 50);
-            width: 350px;
+            width: 50vh;
         }
         img{
             border-radius: 100%;
-
         }
-        #ti{
+        #pessoal{
+            margin-top: 2%;
             position: relative;
             left: 5%;
             color: white;
             font: 30pt bold;
         }
         .ti{
+            margin-top: 2%;
             position: relative;
             left: 5%;
             display: block;
@@ -36,27 +41,47 @@
             font: 25pt bold;
         }
         .text{
+            margin-top: 2%;
             position: relative;
             left: 5%;
             display: block;
             color: white;
             font-size: 17pt;
         }
-        #a1{
+        #linha1{
+            margin-top: 2%;
             width: 300px;
             position: relative;
             left: 5%;
         }
         #nomezao{
+            position: relative;
+            margin-top: 10%;
             font: 8pt bold black;
+            left: 22%;
         }
+        #profissao{
+            margin-top: 2%;
+            display: inline;
+            font: 16pt bold black;
+        }
+        .data{
+            display: inline;
+            position: relative;
+            left: 80%;     
+        }
+        ul{
+            position: relative;
+            left: 2%;
+        }
+
     </style>
 </head>
 <body>
     <div id="canto">
         <img src="./eu.jfif" alt="">
-        <h1 id="ti">Pessoal</h1>
-        <hr id="a1">
+        <h1 id="pessoal">Pessoal</h1>
+        <hr id="linha1">
         <dl>
             <dt class="ti">Nome</dt>
             <dd class="text">Lucas Eduardo Rovani</dd>
@@ -70,6 +95,33 @@
     </div>
     <div id="outroLado">
         <h1 id="Nomezao">Lucas Eduardo Rovani</h1>
+        <hr class="linha">
+        <span id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus magnam vel cum doloribus hic fuga architecto sunt blanditiis at soluta corporis consectetur, repudiandae sit eligendi totam debitis! Possimus, dolores nihil.</span>
+        
+        <h2 id="experiencia">Experiência profissional</h2>
+        <hr class="linha">
+        
+        <p id="profissao"><b>CEO da Microsoft</b></p>
+        <p class="data">1900 - 1939</p>
+        <p class="local"><i>Redmond, Washington</i></p>
+        <ul>
+            <li>Criei o xbox</li>
+            <li>criei o copilot</li>
+            <li>Trabalhei com o Bill Gates</li>
+            <li>Trabalhei na criação do Window 11</li>
+        </ul>
+
+        <p id="profissao"><b>Ministro da fazenda</b></p>
+        <p class="data">2000 - 2024</p>
+        <p class="local"><i>Brasília, Distrito Federal</i></p>
+        <ul>
+            <li>Endividei o país</li>
+            <li>Causei algumas crises econômicas</li>
+            <li>Mandei o Banco Central imprimir muito dinheiro</li>
+            <li>Criei o bolsa-família</li>
+            <li>Criei a zona franca de Manaus</li>
+        </ul>
+
     </div>
 </body>
 </html>
