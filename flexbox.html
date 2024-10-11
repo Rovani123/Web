@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{margin: 0px;}
+        .conteiner{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 100vh;
+            min-height: 100vh;
+            align-items: stretch;
+            justify-content: center;
+            }
+        .conteiner>*{
+            background-color: blue;
+            text-align: center;
+            flex-grow: 1;
+            background-image: url("https://th.bing.com/th/id/OIP.7W4QGZ78dV5jp4EYK0vI5QHaEK?rs=1&pid=ImgDetMain");
+            min-height: 0;
+        }
+        .box:hover{
+            flex-grow: 15;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box" id="box3">box3</div>
+    <div class="box" id="box4">box4</div>
+    <div class="box" id="box5">box5</div>
+    </div>
+</body>
+</html>
