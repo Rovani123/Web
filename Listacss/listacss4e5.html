@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 4 e 5</title>
+    <style>
+        #barraazul:hover{
+            background-color: aqua;
+        }
+        #barraazul{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+        #foguete {
+        width: 100px;
+        background-color: red;
+        position: fixed;
+        animation: subir 3s infinite;
+        }
+        @keyframes subir {
+        0% {
+        bottom: 0;
+        }
+        100% {
+        bottom: 100vh;
+        }
+    }
+    #image{
+            position: relative;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div id="barraazul"></div>
+    <div id="foguete"> <img id="image" src="./foguete.jpg" alt=""></div>
+</body>
+</html>
