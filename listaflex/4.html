@@ -6,43 +6,72 @@
     <title>questao 4</title>
 
     <style>
+        *{margin: 0px;padding: 0px;}
         #mae{
             display: flex;
             flex-direction: row;
             height: 100vh;
             justify-content: center;
             justify-content: space-around;
+            background-color: orange;
         }
         .div{
-            width: 200px;
-            border: 1px solid black;
+            width: 15vw;
+            border: 3px solid black;
             border-radius: 100px;
-            background-image: url("gunner.png");
             background-position: center;
             background-repeat: no-repeat;
+            transition-duration: 1s;
+            background-size: 100%;
         }
         #div1{
+            display: flex;
+            align-items: end;
+            justify-content: center;
             background-image: url("gunner.png");
+            background-color: grey;
         }
         #div1:hover{
-            width: 673px;
-            background-size: 100%;
+            width: 35vw;
         }
         #div2{
-            background-image: url("scout.png");
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            background-image: url("Driller.webp");
+            background-color: yellow;
         }
         #div2:hover{
-            width: 431px;
-            background-size: 100%;
+            width: 35vw;
+        }
+        #div3{
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            background-image: url("Engineer.webp");
+            background-color: red;
+        }
+        #div3:hover{
+            width: 35vw;
+        }
+        #div4{
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            background-image: url("scout.png");
+            background-color: blue;
+        }
+        #div4:hover{
+            width: 30vw;
         }
     </style>
 </head>
 <body>
     <div id="mae">
-        <div class="div" id="div1"></div>
-        <div class="div" id="div2"></div>
-        <div class="div" id="div3"></div>
-        <div class="div" id="div4"></div>
+        <div class="div" id="div1"><h1>Atirador</h1></div>
+        <div class="div" id="div2"><h1>Escavador</h1></div>
+        <div class="div" id="div3"><h1 style="">Engenheiro</h1></div>
+        <div class="div" id="div4"><h1>Batedor</h1></div>
     </div>
 </body>
 </html>
