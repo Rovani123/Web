@@ -14,10 +14,15 @@
             background-color: black;
         }
         #foguete {
-        width: 100px;
         background-color: red;
         position: fixed;
+        left: 50%;
         animation: subir 3s infinite;
+        height: 200px;
+        width: 200px;
+        background-image: url("foguete.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
         }
         @keyframes subir {
         0% {
@@ -35,6 +40,6 @@
 </head>
 <body>
     <div id="barraazul"></div>
-    <div id="foguete"> <img id="image" src="./foguete.jpg" alt=""></div>
+    <div id="foguete"></div>
 </body>
 </html>
