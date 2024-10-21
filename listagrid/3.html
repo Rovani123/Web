@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 3</title>
+    <style>
+        *{margin: 0x;padding: 0px;}
+        div{
+            border: 1px solid black;
+        }
+        #mae{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas: 
+            "ga  ga  .   .  gb"
+            "gc  gd  gd  gd gd"
+            "gc  gd  gd  gd gd"
+            ;
+        }
+        #ga{grid-area: ga; background-color: red;}
+        #gb{grid-area: gb; background-color: blue;}
+        #gc{grid-area: gc; background-color: orange;}
+        #gd{
+            display: grid;
+            grid-template-areas: 
+            "ge  gf  gf   gg "
+            "gm  gi  gi  gj "
+            ;
+            grid-area: gd;
+            background-color: green;
+        }
+        #ge{grid-area: ge; background-color: grey;}
+        #gf{grid-area: gf; background-color: grey;}
+        #gg{grid-area: gg; background-color: grey;}
+        #gm{grid-area: gm; background-color: grey;}
+        #gi{grid-area: gi; background-color: grey;}
+        #gj{grid-area: gj; background-color: grey;}
+    </style>
+</head>
+<body>
+    <div id="mae">
+        <div id="ga"></div>
+        <div id="gb"></div>
+        <div id="gc"></div>
+        <div id="gd">
+            <div id="ge"></div>
+            <div id="gf"></div>
+            <div id="gg"></div>
+            <div id="gm"></div>
+            <div id="gi"></div>
+            <div id="gj"></div>
+        </div>
+    </div>
+</body>
+</html>

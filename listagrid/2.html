@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 2</title>
+    <style>
+        *{margin: 0x;padding: 0px;}
+        div{
+            border: 1px solid black;
+        }
+        #mae{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas: 
+            "header header   header   header"
+            "nav    content  content  content"
+            "nav    content  content  content"
+            "nav    footer   footer   footer"
+            ;
+        }
+        #header{grid-area: header; background-color: red;}
+        #nav{grid-area: nav; background-color: blue;}
+        #content{grid-area: content; background-color: orange;}
+        #footer{grid-area: footer; background-color: green;}
+    </style>
+</head>
+<body>
+    <div id="mae">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

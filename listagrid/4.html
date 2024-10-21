@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 4</title>
+    <style>
+        *{margin: 0x;padding: 0px;}
+        div{
+            border: 1px solid black;
+        }
+        #mae{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas: 
+            "header  header   header   header  header"
+            "header  header   header   header  header"
+            "left    banner   banner   banner  right"
+            "left    main     main     main    right"
+            "left    main     main     main    right"
+            "left    main     main     main    right"
+            "left    main     main     main    right"
+            "left    main     main     main    right"
+            "left    low      low      low     right"
+            "footer  footer   footer   footer  footer"
+            ;
+        }
+        @media (min-width:437px){
+            @media (min-height:873px) {
+            #mae{
+                min-height: 100vh;
+                min-width: 100vw;
+                display: grid;
+                grid-template-areas: 
+                "header"
+                "banner"
+                "left"
+                "main"
+                "main"
+                "main"
+                "main"
+                "main"
+                "main"
+                "main"
+                "right"
+                "low"
+                "footer"
+                ;   
+            }
+        }
+        }
+        #header{grid-area: header; background-color: orange;}
+        #banner{grid-area: banner; background-color: red;}
+        #left{grid-area: left; background-color: green;}
+        #main{grid-area: main; background-color: blue;}
+        #right{grid-area: right; background-color: orange;}
+        #low{grid-area: low; background-color: green;}
+        #footer{grid-area: footer; background-color: blue;}
+    </style>
+</head>
+<body>
+    <div id="mae">
+        <div id="header"></div>
+        <div id="banner"></div>
+        <div id="left"></div>
+        <div id="main"></div>
+        <div id="right"></div>
+        <div id="low"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
