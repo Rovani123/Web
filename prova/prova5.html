@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        *{margin: 0x;padding: 0px;}
+        #todo{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas:
+            "bar  hea  hea  hea" 
+            "bar  con  con  con"
+            "bar  con  con  con"
+            "bar  con  con  con"
+            "bar  con  con  con"
+            "bar  con  con  con"
+            "bar  con  con  con"
+            "low  low  low  low"
+            ;
+        }
+        @media (max-width:1000px){
+            #todo{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas:
+            "hea  hea  hea  hea" 
+            "con  con  con  con"
+            "con  con  con  con"
+            "con  con  con  con"
+            "con  con  con  con"
+            "con  con  con  con"
+            "con  con  con  con"
+            "low  low  low  low"
+            ;
+            }
+                
+        }
+        #hea{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: hea;
+            background-color: red;
+        }
+        #bar{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            grid-area: bar;
+            background-color: blue;
+        }
+        #con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: con;
+            background-color: green;
+        }
+        #low{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: low;
+            background-color: yellow;
+        }
+        #chat{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            right: 0%;
+            bottom: 0%;
+            height: 50vh;
+            width: 20vw;
+            border: 1px solid black;
+            background-color: grey;
+        }
+        .aaa{
+            border: 1px solid black;
+            border-radius: 5%;
+        }
+        #aa{
+            font: 25pt bold black;
+        }
+        input{
+            font: 25pt normal black;
+        }
+        label{
+            font: 25pt normal black;
+        }
+        li{
+            font: 25pt normal black;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo">
+        <div id="hea">
+            <h1 id="aa">Nome do delivery</h1>
+        </div>
+        <div id="bar">
+            <ul>
+                <li>Olha como</li>
+                <li>eu sei</li>
+                <li>colocar lista</li>
+                <li>me da um 10</li>
+            </ul>
+        </div>
+        <div id="con">
+            <form action="https://google.com/">
+                <label for="t1">Digita alguma coisa</label>
+                <input type="text" name="t1">
+                <input type="submit" value="ok">
+            </form>
+        </div>
+        <div id="low">
+            <h1 id="aa">To cansado</h1>
+        </div>
+        <div id="chat">
+            <h1 class="aaa">p1-ola</h1>
+            <h1 class="aaa">p2-Como você está?</h1>
+            <h1 class="aaa">p1-Não aguento mais fazer a prova</h1>
+            <h1 class="aaa">p2-mfaiofmna</h1>
+            <h1 class="aaa">p2-thau</h1>
+            <h1 class="aaa">p1-thau</h1>
+        </div>
+    </div>
+</body>
+</html>

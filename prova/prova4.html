@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+        #tudo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width:1000px)
+        {
+            #tudo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+        #japan{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 33vh;
+            min-width: 33vw;
+            border: 1px solid black;
+            transition-duration: 1s;
+        }
+        #japan:hover{
+            min-height: 50vh;
+            min-width: 50vw;
+        }
+        #bola{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border-radius: 100%;
+        }
+        #paisbaixo{
+            display: grid;
+            grid-template-areas:
+            "cima"
+            "meio"
+            "baixo"
+            ;
+            min-height: 33vh;
+            min-width: 33vw;
+            border: 1px solid black;
+            transition-duration: 1s;
+        }
+        #paisbaixo:hover{
+            min-height: 50vh;
+            min-width: 50vw;
+            
+            
+        }
+        #italia{
+            display: grid;
+            grid-template-areas: "left center right";
+            min-height: 33vh;
+            min-width: 33vw;
+            border: 1px solid black;
+            transition-duration: 1s;
+        }
+        #italia:hover{
+            min-height: 50vh;
+            min-width: 50vw;
+        }
+        #v1{
+            grid-area: cima;
+            background-color: red;
+        }
+        #b1{
+            grid-area: meio;
+            background-color: white;
+        }
+        #a1{
+            grid-area: baixo;
+            background-color: blue;
+        }
+        #g2{
+            grid-area: left;
+            background-color: green;
+        }
+        #b2{
+            grid-area: center;
+            background-color: white;
+        }
+        #v2{
+            grid-area: right;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="tudo">
+        <div id="japan"><div id="bola"></div></div>
+        <div id="paisbaixo"><div id="v1"></div><div id="b1"></div><div id="a1"></div></div>
+        <div id="italia"><div id="g2"></div><div id="b2"></div><div id="v2"></div></div>
+    </div>
+</body>
+</html>
