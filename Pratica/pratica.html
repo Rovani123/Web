@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe-se</title>
+    <style>
+        *{margin: 0px; padding: 0px;}
+        #mae{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas: 
+            "lbar  head  head  head  head"
+            "lbar  head  head  head  head"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "lbar  cont  cont  cont  cont"
+            "low_  low_  low_  low_  low_"
+            ;
+        }
+        #head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: head;
+            background-color: red;
+            border-bottom: 1px solid black;
+        }
+        #lbar{
+            grid-area: lbar;
+            background-color: green;
+            border-right: 1px solid black;
+        }
+        #cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: cont;
+            background-color: blue;
+        }
+        #low_{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: low_;
+            background-color: rgb(155, 235, 109);
+            border-top: 1px solid black;
+        }
+        #planeta{
+            height: 100px;
+            
+        }
+        #voltar{
+            position: relative;
+            left: 5%;
+            top: 3%;
+            height: 40px;
+            width: 90px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font: 20pt bold black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mae">
+        <div id="head">
+            <img id="planeta" src="./planeta.png" alt="">
+            <h1>Cuide do meio Ambiente</h1>
+        </div>
+        <div id="lbar">
+            <form id="voltar" action="https://google.com">
+                <input id="voltar" type="submit" value="Voltar">
+            </form>
+        </div>
+        <div id="cont">
+            <form action="./pratica2.html">
+                <label for="resposta">O que fazer para cuidar do meio ambiente</label> <br>
+                <input type="text" id="resposta">
+                <input type="submit">
+            </form>
+        </div>
+        <div id="low_">
+            <h1>Site Criado por mim</h1>
+        </div>
+    </div>
+</body>
+</html>
