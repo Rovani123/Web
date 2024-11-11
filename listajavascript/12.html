@@ -16,6 +16,11 @@
     
     <script>
 
+        function teste(){
+            let bt = document.querySelector("#bt");
+            document.body.addEventListener("click",soma);
+        }
+
         function soma(){
             a = parseInt(document.getElementById("a1").value);
             b = parseInt(document.getElementById("a2").value);
