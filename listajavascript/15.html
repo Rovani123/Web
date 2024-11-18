@@ -34,13 +34,13 @@
         let bt = document.getElementById("bt");
         let lblresultado = document.getElementById("numAleatorio");
 
-        document.body.addEventListener("click",clickar);
+        bt.addEventListener("click",clickar);
         function clickar(){
-            let lblmin = document.getElementById("lmin");
-            let lblmax = document.getElementById("lmax");
+            let min = Number.parseFloat(document.getElementById("min").value);
+            let max = Number.parseFloat(document.getElementById("max").value);
             let numAle = Math.random();
-            let resultado = numAle*lblmin;
-            lblresultado.innerText = parseFloat(lblmin);
+            let resultado = Math.round(Math.random()*(max-min)+min);
+            lblresultado.innerText = resultado;
         }
     </script>
 </body>

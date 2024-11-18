@@ -7,7 +7,7 @@
 </head>
 <body>
     <input type="text" id="txt">
-    <button id="bt" onclick="copia()">Copiar</button>
+    <button id="bt" onclick="copia2()">Copiar</button>
     <div id="paragrafos"></div>
 
     <script>
@@ -19,7 +19,9 @@
             txt.value = "";
         }
         function copia2(){
-            paragrafos.innerHTML += `<p> ${txt.value} </p>`;
+            let meup = document.createElement("p");
+            meup.innerHTML= txt.value;
+            paragrafos.appendChild(meup);
             txt.value = "";
         }
     </script>
