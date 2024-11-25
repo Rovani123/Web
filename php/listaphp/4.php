@@ -6,6 +6,12 @@
     <title>4</title>
 </head>
 <body>
+    <?php
+    function randomizer(){
+        echo rand();
+    }
+    randomizer();
+    ?>
     
 </body>
 </html>
