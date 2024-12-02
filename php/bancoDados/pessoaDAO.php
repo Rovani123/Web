@@ -7,9 +7,8 @@
         $sql = "insert into usuario (nome,email) values (?,?)";
 
         $stmt = $db ->prepare($sql);
-        $stmt->bindParam(0,$nome);
-        $stmt->bindParam(1,$email);
+        $stmt->bindValue(1,$nome);
+        $stmt->bindValue(2,$email);
         $stmt->execute();
-        $stmt->close();
     }
 ?>
