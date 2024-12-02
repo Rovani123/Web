@@ -11,4 +11,14 @@
         $stmt->bindValue(2,$email);
         $stmt->execute();
     }
+
+    function getUsuarios(){
+        $db =conecta();
+        $sql = "select * from usuario";
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
+        var_dump($resultado);
+    }
+    getUsuarios();
 ?>
