@@ -107,12 +107,18 @@
             <button id="ponto">.</button>
             <button id="AC">AC</button>
         </div>
-        <div id="cal" class="div"><button id="=">=</button></div>
+        <div id="cal" class="div"><button id="calcular">=</button></div>
     </div>
 
     <script>
-        let numL=[];
-        let num;
+        let nums =[];
+        let operacoes=["mais"];
+        let resultado=0;
+        let num="";
+        let temponto =true;
+
+        let visor = document.getElementById("vis");
+        let calcular = document.getElementById("calcular");
 
         let bt0 = document.getElementById("zero");
         let bt1 = document.getElementById("p1");
@@ -133,26 +139,101 @@
         let btmult =document.getElementById("mult");
         let btdivi =document.getElementById("divi");
 
-        bt0.addEventListener("click",()=>{})
-        bt1.addEventListener("click",()=>{})
-        bt2.addEventListener("click",()=>{})
-        bt3.addEventListener("click",()=>{})
-        bt4.addEventListener("click",()=>{})
-        bt5.addEventListener("click",()=>{})
-        bt6.addEventListener("click",()=>{})
-        bt7.addEventListener("click",()=>{})
-        bt8.addEventListener("click",()=>{})
-        bt9.addEventListener("click",()=>{})
+        bt0.addEventListener("click",()=>{num +=0; visor.innerHTML =num;})
+        bt1.addEventListener("click",()=>{num +=1; visor.innerHTML = num})
+        bt2.addEventListener("click",()=>{num +=2; visor.innerHTML = num})
+        bt3.addEventListener("click",()=>{num +=3; visor.innerHTML = num})
+        bt4.addEventListener("click",()=>{num +=4; visor.innerHTML = num})
+        bt5.addEventListener("click",()=>{num +=5; visor.innerHTML = num})
+        bt6.addEventListener("click",()=>{num +=6; visor.innerHTML = num})
+        bt7.addEventListener("click",()=>{num +=7; visor.innerHTML = num})
+        bt8.addEventListener("click",()=>{num +=8; visor.innerHTML = num})
+        bt9.addEventListener("click",()=>{num +=9; visor.innerHTML = num})
 
-        btponto.addEventListener("click",()=>{})
-        btac.addEventListener("click",()=>{})
+        btponto.addEventListener("click",()=>{
+            if(temponto){
+                if(num ==""){
+                num +="0.";
+                visor.innerHTML = num;
+                temponto=false 
+                }else{
+                num +=".";
+                visor.innerHTML = num;
+                temponto=false
+                }
+            }
+        })
+        btac.addEventListener("click",()=>{resultado=0;temponto=true;nums=[];operacoes=[];num="";visor.innerHTML="0";})
         
-        btmais.addEventListener("click",()=>{})
-        btmenos.addEventListener("click",()=>{})
-        btmult.addEventListener("click",()=>{})
-        btdivi.addEventListener("click",()=>{})
+        btmais.addEventListener("click",()=>{
+            if(num !=""){
+                nums.push(parseFloat(num));
+                operacoes.push("mais");
+            }else{
+                alert("Você quebrou minha calculadora :(")
+            }
+            num="";
+            temponto=true;
+            visor.innerHTML="+";
+        })
+        btmenos.addEventListener("click",()=>{
+            if(num !=""){
+                nums.push(parseFloat(num));
+                operacoes.push("menos");
+            }else{
+                alert("Você quebrou minha calculadora :(")
+            }
+            num="";
+            temponto=true;
+            visor.innerHTML="-";
+        })
+        btmult.addEventListener("click",()=>{
+            if(num !=""){
+                nums.push(parseFloat(num));
+                operacoes.push("mult");
+            }else{
+                alert("Você quebrou minha calculadora :(")
+            }
+            num="";
+            temponto=true;
+            visor.innerHTML="x";
+        })
+        btdivi.addEventListener("click",()=>{
+            if(num !=""){
+                nums.push(parseFloat(num));
+                operacoes.push("divi");
+            }else{
+                alert("Você quebrou minha calculadora :(")
+            }
+            num="";
+            temponto=true;
+            visor.innerHTML="/";
+        })
         
-
+        calcular.addEventListener("click",()=>{
+            nums.push(parseFloat(num));
+            for(let i=0;i<nums.length;i++){
+                switch(operacoes[i]){
+                    case "mais":
+                        resultado+=nums[i];
+                        break;
+                    case "menos":
+                        resultado-=nums[i];
+                        break;
+                    case "mult":
+                        resultado*=nums[i];
+                        break;
+                    case "divi":
+                        resultado/=nums[i];
+                        break;
+                }
+            }
+            num="0";
+            operacoes.push("menos");
+            temponto=true;
+            visor.innerHTML=resultado;
+            resultado=0;
+        })
        
 
 
