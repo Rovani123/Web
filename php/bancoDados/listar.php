@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>listar</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    <pre>
+    
     <?php
     include_once("database.php");
     include_once("pessoaDAO.php");
-    $resul = getUsuarios();
-    for($i =0; $i < $resul.ob_get_length; $i++){
-        echo "A";
-    }
+
+    $listaPessoa = getUsuarios();
     
     ?>
-    </pre>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+        <?php
+        for($i=0; $i <count($listaPessoa); $i++){
+            ?>
+            <tr>
+                <td><?php echo $listaPessoa[$i]["idusuario"] ?></td>
+                <td><?php echo $listaPessoa[$i]["nome"] ?></td>
+                <td><?php echo $listaPessoa[$i]["email"] ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+
 </body>
 </html>

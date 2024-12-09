@@ -7,7 +7,7 @@
             $nome = $_POST["nome"];
             $email = $_POST["email"];
             save($nome,$email);
-            header("Location: listar.php"); 
+            header("Location: listar.php");
         }else{
             echo "Não deu certo";
         }
