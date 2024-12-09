@@ -20,6 +20,4 @@
             echo "não foi possivel conectar";
         }
     }
-    chekConexao(conecta());
-    var_dump(conecta());
 ?>
