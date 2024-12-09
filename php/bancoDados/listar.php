@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>listar</title>
     <style>
-        
+
     </style>
 </head>
 <body>
@@ -27,7 +27,7 @@
         for($i=0; $i <count($listaPessoa); $i++){
             ?>
             <tr>
-                <td><?php echo $listaPessoa[$i]["idusuario"] ?></td>
+                <td><a href="editar.php/?pessoa_id= <?php echo $listaPessoa[$i]["idusuario"] ?>"><?php echo $listaPessoa[$i]["idusuario"] ?></a></td>
                 <td><?php echo $listaPessoa[$i]["nome"] ?></td>
                 <td><?php echo $listaPessoa[$i]["email"] ?></td>
             </tr>

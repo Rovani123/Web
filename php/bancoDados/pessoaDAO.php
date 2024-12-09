@@ -20,4 +20,14 @@
         $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
         return $resultado;
     }
+
+    function getUsuario($id){
+        $db =conecta();
+        $sql = "select * from usuario where idusuario = ?";
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(1,$id);
+        $stmt->execute();
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $usuario;
+    }
 ?>
