@@ -11,24 +11,29 @@
         <input type="text" name="string" id="string">
         <input type="submit" value="OK">
     </form>
+
     <?php
     $string = $_REQUEST["string"];
-    echo "Tamanho: " . $string.ob_get_length;
-    echo"
-    <script>
-            function ehPalindromo(str){
-            str = str.toUpperCase(str);
-            let rts = str.split('').reverse().join('');
-            if(rts == str){
-                return true;
-            }else{
-                return false;
-            }
+    echo "Tamanho: " . strlen($string) . "<br>";
+    
+    $string = strtolower(str_replace(' ', '', $string));
+    $reverso = strrev($string); 
+    if ($string == $reverso) { 
+        echo "é palindromo <br>"; 
+    } else { 
+        echo "não é palindromo <br>";
+    }
+    $consoante =0;
+    $vogal =0;
+    for($i =0; $i < strlen($string); $i++){
+        if(strtolower($string[$i]) == "a" || strtolower($string[$i]) == "e" || strtolower($string[$i]) == "i" ||  strtolower($string[$i]) == "o" || strtolower($string[$i]) == "u"){
+            $vogal++;
+        }else{
+            $consoante++;
         }
-    </script>
-    ";
-    echo "Palindromo: " . "";
-
+    }
+    echo "vogais: " . $vogal . "<br>" . "consoantes: " . $consoante;
     ?>
+
 </body>
 </html>

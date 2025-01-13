@@ -19,7 +19,8 @@
     </form>
     <?php
     $num = $_REQUEST["num"];
-    echo "
+    if($_REQUEST["num"] != null){
+        echo "
         <table>
         <tr>
             <td>1</td>
@@ -63,6 +64,7 @@
         </tr>
     </table>
     ";
+    }
     ?>
 </body>
 </html>

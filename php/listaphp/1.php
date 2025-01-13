@@ -6,6 +6,6 @@
     <title>1</title>
 </head>
 <body>
-    <!-- -->
+    <?php echo "oi"?>
 </body>
 </html>
