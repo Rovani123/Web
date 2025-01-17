@@ -22,8 +22,8 @@
     <title><?php echo $titulo; ?></title>
     <style>
         *{margin: 0px;}
-        #cima{min-height:100vh; display:flex; justify-content: center; align-items:center;}
-        fieldset{display:flex; flex-direction: column; align-items:center;}
+        #cima{min-height:100vh; display:flex; justify-content: center; align-items:center;background-image: url("fundo.jpg");background-repeat:no-repeat; background-size:cover;}
+        fieldset{display:flex; flex-direction: column; align-items:center;background-color:white; border: 2px solid black;}
         form{display:flex; flex-direction: column; align-items:center;}
         label{font: 20pt normal black; font-family: georgia;}
         input{font: 20pt normal black; font-family: georgia;}
@@ -63,6 +63,5 @@
             <a href="usuarios.php"><button>Cancelar</button></a>
         </fieldset>
     </div>
-
 </body>
 </html>

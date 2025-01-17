@@ -19,21 +19,21 @@
     <title>Usuários</title>
     <style>
         *{margin: 0px; border-collapse:collapse;}
+        body{background-image: url("fundo.jpg");background-repeat:no-repeat; background-size:cover;}
         #cima{min-height:20vh; display:flex; justify-content: center; align-items:center;}
         #baixo{min-height:80vh; display:flex; justify-content: center; align-items:center;}
-        fieldset{display:flex; }
+        fieldset{display:flex; background-color:white; border: 2px solid black;}
         th{border: 1px solid black; font: 20pt normal black; font-family: georgia; padding:1px;}
         .borda{border: 1px solid black; font: 20pt normal black; font-family: georgia; padding:1px;}
         input{font: 20pt normal black; font-family: georgia;}
         button{font: 20pt normal black; font-family: georgia;}
         #btExcluir{color:red;}
-        /*#deslogar{justify-self:start;align-self:start;}*/
     </style>
 </head>
 <body>
     <div id="cima">
-        <a href="sair.php" id="deslogar"><button id="deslogar">Deslogar</button></a>
         <fieldset>
+            <a href="sair.php" id="deslogar"><button id="deslogar">Deslogar</button></a>
             <form action="cadastroEdicao.php" method="post">
                  <input type="text" name="tipo" value="Cadastrar" hidden>
                  <input type="submit" value="Cadastrar">

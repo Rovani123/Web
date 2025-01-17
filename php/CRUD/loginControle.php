@@ -8,6 +8,6 @@
             header("location:login.php?login=0");
         }
     }else{
-        header("location:login.php?login=0");
+        header("location:login.php?");
     }
 ?>

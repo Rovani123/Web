@@ -6,8 +6,8 @@
     <title>Login</title>
     <style>
         *{margin: 0px;}
-        body{display: flex;align-items: center; justify-content: center; min-height: 100vh;flex-direction: column;}
-        fieldset{display: flex;align-items: center; justify-content: center;flex-direction: column;}
+        body{display: flex;align-items: center; justify-content: center; min-height: 100vh;flex-direction: column; background-image: url("fundo.jpg");background-repeat:no-repeat; background-size:cover;}
+        fieldset{display: flex;align-items: center; justify-content: center;flex-direction: column; background-color:white; border: 2px solid black;}
         form{display: flex;align-items: center; justify-content: center;flex-direction: column; }
         label{font: 20pt normal black; margin-top: 4%; font-family: georgia;}
         input{font: 20pt normal black; margin-top: 4%; font-family: georgia;}
