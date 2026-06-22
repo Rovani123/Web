@@ -1,0 +1,10 @@
+/*
+item 1 = regra 1 // li=red
+item 2 = regra 3 // class=fruta
+item 3 = regra 6 // id mais especifico
+item 4 = regra 7 // id e class mais especifico
+item 5 = regra 3 // class fruta
+item 6 = regra 4 // está do lado de um li e é class churras
+item 7 = regra 4 // está do lado de um li e é class churras
+item 8 = regra 5 // com o draggable é mais especifico
+*/

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6b-display</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+        #box1{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            background-color: purple;
+            height: 100px;
+            width: 100px;
+        }
+        #box2{
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            background-color: green;
+            height: 100px;
+            width: 100px;
+        }
+        #box3{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        #box4{
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+        }
+        #box5{
+            position: fixed;
+            left: 50%;
+            bottom: 50%;
+            transform: translateX(50%);
+            transform: translateY(50%);
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--Com o positon fixed da para colocar os elementos em relação a tela. Colocando eles nos cantos e no meio usando transform-->
+    <div class="tam">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+        <div id="box5">5</div>
+    </div>
+</body>
+</html>
