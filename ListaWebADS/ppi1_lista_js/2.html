@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao">Click</button>
+
+    <script>
+        let botao=document.getElementById("botao");
+        botao.addEventListener("click",()=>{
+            let vars="a";
+            let vari=0;
+            let varb=true;
+            let varu;
+            let varn=null;
+            let vararr=[];
+            let varobj={};
+            let ps=document.createElement("p");
+            ps.id="pid";
+            ps.innerHTML=typeof(vars);
+            let pi=document.createElement("p");
+            pi.id="pinteger";
+            pi.innerHTML=typeof(vari);
+            let pb=document.createElement("p");
+            pb.id="pboolean";
+            pb.innerHTML=typeof(varb);
+            let pu=document.createElement("p");
+            pu.id="pundefined";
+            pu.innerHTML=typeof(varu);
+            let pn=document.createElement("p");
+            pn.id="pnull";
+            pn.innerHTML=typeof(varn);
+            let parr=document.createElement("p");
+            parr.id="parray";
+            parr.innerHTML=typeof(vararr);
+            let pobj=document.createElement("p");
+            pobj.id="pobjc";
+            pobj.innerHTML=typeof(varobj);
+            document.body.appendChild(ps);
+            document.body.appendChild(pi);
+            document.body.appendChild(pb);
+            document.body.appendChild(pu);
+            document.body.appendChild(pn);
+            document.body.appendChild(parr);
+            document.body.appendChild(pobj);
+        });
+    </script>
+</body>
+</html>
