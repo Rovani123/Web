@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <label for="texto">Texto</label>
+    <input type="text" id="texto">
+    <button>Salvar</button>
+    <div class="text"></div>
+
+    <script>
+        const input = document.getElementById("texto");
+        const button = document.querySelector("button");
+        const textdiv = document.querySelector(".text");
+
+        let textos = [];
+
+        button.addEventListener("click",()=>{
+            const texto = input.value;
+            textos.push(texto);
+
+            const textosJSON = JSON.stringify(textos);
+            localStorage.setItem("texto",textosJSON);
+            const p = document.createElement("p");
+            p.textContent = texto;
+            textdiv.appendChild(p);
+        });
+        if(localStorage.getItem("texto")){
+            const textosJSON = localStorage.getItem("texto");
+            textos =JSON.parse(textosJSON);
+            textos.forEach((texto) => {
+                const p = document.createElement("p");
+                p.textContent = texto;
+                textdiv.appendChild(p);
+            });
+        }
+    </script>
+</body>
+</html>

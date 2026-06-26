@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+        .bandeiras{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        #japao,#brasil{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+        }
+        #japao.bandeiras>#bola{
+            background-color: red;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        #alemanha,#holanda{
+            display: flex;
+            flex-flow: column;
+        }
+        #alemanha.bandeiras>*, #holanda.bandeiras>*{
+            width: 300px;
+            flex-grow: 1;
+        }
+        #alemanha.bandeiras>.faixa1{background-color: black;}
+        #alemanha.bandeiras>.faixa2{background-color: red;}
+        #alemanha.bandeiras>.faixa3{background-color: yellow;}
+        #holanda.bandeiras>.faixa1{background-color: red;}
+        #holanda.bandeiras>.faixa2{background-color: white;}
+        #holanda.bandeiras>.faixa3{background-color: blue;}
+        #italia{
+            display: flex;
+            flex-flow: row;
+        }
+        #italia.bandeiras>.faixa1{background-color: green;}
+        #italia.bandeiras>.faixa2{background-color: white;}
+        #italia.bandeiras>.faixa3{background-color: red;}
+        #italia.bandeiras>*{
+            height: 200px;
+            flex-grow: 1;
+        }
+        #brasil{
+            background-color: green;
+        }
+        #brasil.bandeiras>#amarelo{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            background-color: yellow;
+            transform: rotateZ(45deg);
+        }
+        #brasil.bandeiras>#amarelo>#bola{
+            background-color: blue;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bandeiras" id="japao"><div id="bola"></div></div><br>
+    <div class="bandeiras" id="alemanha">
+        <div class="faixa1"></div>
+        <div class="faixa2"></div>
+        <div class="faixa3"></div>
+    </div><br>
+    <div class="bandeiras" id="holanda">
+        <div class="faixa1"></div>
+        <div class="faixa2"></div>
+        <div class="faixa3"></div>
+    </div><br>
+    <div class="bandeiras" id="italia">
+        <div class="faixa1"></div>
+        <div class="faixa2"></div>
+        <div class="faixa3"></div>        
+    </div><br>
+    <div class="bandeiras" id="brasil">
+        <div id="amarelo"><div id="bola"></div></div>
+    </div><br>
+</body>
+</html>
