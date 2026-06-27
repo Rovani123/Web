@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Busca Filmes</h1>
+    <label for="busca">Busca</label>
+    <input type="text" id="busca">
+    <button id="button">Buscar</button>
+
+    <div class="resultado"></div>
+
+    <script>
+        const apikey = "f77bfada";
+
+        button.addEventListener("click", ()=>{
+            let str = document.getElementById("busca").value;
+            fetch(`http://www.omdbapi.com/?apikey=${apikey}&s=${str}`);
+        });
+    </script>
+</body>
+</html>
