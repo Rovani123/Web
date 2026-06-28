@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+    }
+    .tela{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+    #ladoE{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 3;
+    }
+    #ladoD{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 2;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    #ladoE>div>button{
+        border: 1px solid black;
+        font-size: 20px;
+        padding: 3px;
+    }
+    </style>
+</head>
+<body>
+    <div class="tela">
+        <div id="ladoE">
+            <h1 id="tempo">00:00:00</h1>
+            <div>
+                <button id="iniciar">Iniciar/Parada</button>
+                <button id="zerar">Zerar</button>
+            </div>
+        </div>
+        <div id="ladoD">
+            <h1>Paradas</h1>
+        </div>
+    </div>
+
+    <script>
+        let iniT=true;
+        let intervalo;
+        let date = new Date;
+        date-=date;
+        let num=1;
+        function formatartempo(time) {
+            let date = new Date(time);
+            let min = String(date.getUTCMinutes()).padStart(2, '0');
+            let sco = String(date.getUTCSeconds()).padStart(2, '0');
+            let mili = String(Math.floor(date.getUTCMilliseconds() / 10)).padStart(2, '0');
+
+            return `${min}:${sco}:${mili}`;
+        }
+        iniciar.addEventListener("click",()=>{
+            if(iniT){
+                intervalo = setInterval(()=>{
+                    date = Date.now();
+                    //tempo.innerHTML =`${date.toLocaleString()}`;
+                    tempo.innerHTML=formatartempo(date);
+                },1000);
+                iniT=false;
+            }
+            else{
+                clearInterval(intervalo);
+                const p=document.createElement("p");
+                p.innerHTML= `${num} - ${formatartempo(date)}`;
+                num++;
+                ladoD.appendChild(p);
+                iniT=true;
+            }
+        });
+        zerar.addEventListener("click",()=>{
+            tempo.innerHTML="00:00:00";
+            num=1;
+            clearInterval(intervalo);
+            const ps = document.querySelectorAll('p');
+            ps.forEach(p=>p.remove());
+        });
+    </script>
+</body>
+</html>

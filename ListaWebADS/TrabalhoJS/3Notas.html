@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+    }
+    .tela{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+    #ladoE{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    #ladoE>button, #ladoE>div{
+        padding: 2px;
+        margin: 1px;
+        border: 1px solid black;
+        font-size: 15px;
+    }
+    #ladoE>h1{
+        display: flex;
+        justify-content: center;
+    }
+    #ladoE>div{border: 1px solid black;}
+    #ladoD{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 2;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    #titulotxt{
+        font-size: 40px;
+        border-bottom: 1px solid black;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    #notatxt{
+        font-size: 25px;
+        border: 1px solid black;
+        resize: none;
+        width: 90%;
+        height: 90%;
+    }
+    </style>
+</head>
+<body>
+    <div class="tela">
+        <div id="ladoE">
+            <h1>Notas</h1>
+            <button id="criar">Criar Nota</button>
+            <button id="salvar">Salvar Nota</button>
+            <button id="excluir">Excluir Nota</button>
+        </div>
+        <div id="ladoD">
+            <input type="text" id="titulotxt" placeholder="Titulo" hidden>
+            <textarea id="notatxt" hidden></textarea>
+        </div>
+    </div>
+    <script>
+        let id=1;
+        let notasel=0;
+        let notas =[];
+
+        if(localStorage.getItem("notas")){
+            const objJSON = localStorage.getItem("notas");
+            notas =JSON.parse(objJSON);
+            notas.forEach(nota => {
+                let novo=document.createElement("div");
+                novo.id=nota.id;
+                novo.innerHTML=nota.titulo;
+                novo.addEventListener("click",()=>{
+                    titulotxt.hidden=false;
+                    notatxt.hidden=false;
+                    notasel=nota.id;
+                    titulotxt.value=nota.titulo;
+                    notatxt.value=nota.conteudo;
+                });
+                ladoE.appendChild(novo);
+                id=nota.id+1;
+            });
+        }
+
+        criar.addEventListener("click",()=>{
+            titulotxt.hidden=false;
+            notatxt.hidden=false;
+            titulotxt.value="Nova Nota";
+            notatxt.value=""
+            let nota ={
+                id:id,
+                titulo:titulotxt.value,
+                conteudo:notatxt.value};
+            notasel=id;
+            id++;
+
+            notas.push(nota);
+            localStorage.setItem("notas",JSON.stringify(notas));
+
+
+            let novo=document.createElement("div");
+            novo.id=nota.id;
+            novo.innerHTML=nota.titulo;
+            novo.addEventListener("click",()=>{
+                notasel=nota.id;
+                titulotxt.value=nota.titulo;
+                notatxt.value=nota.conteudo;
+            });
+            ladoE.appendChild(novo);
+        });
+        salvar.addEventListener("click",()=>{
+            const notasalvar = notas.find(f=>f.id==notasel);
+            notasalvar.titulo=titulotxt.value;
+            notasalvar.conteudo=notatxt.value;
+            let temp = document.getElementById(notasel);
+            temp.innerHTML=titulotxt.value;
+            localStorage.setItem("notas",JSON.stringify(notas));
+        });
+
+        excluir.addEventListener("click",()=>{
+            let sim = confirm("Quer excluir?");
+            if(sim){
+                notas = notas.filter(nota => nota.id !== notasel);
+                let temp = document.getElementById(notasel);
+                temp.remove();
+                localStorage.setItem("notas",JSON.stringify(notas));
+            }
+        });
+    </script>
+</body>
+</html>
