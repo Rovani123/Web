@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        *{
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        }
+        #tela{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+        #cima{
+            display: flex;
+            flex-grow: 1;
+            background-color: black;align-items: center;
+        }
+        #cima>*{
+            background-color: green;
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+        }
+        #baixo{
+            display: flex;
+            flex-grow: 5;
+        }
+        #ladoE{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: orange;
+            flex-grow: 1;
+        }
+        #ladoD{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 6;
+        }
+        #cab{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            background-color: aqua;
+        }
+        #con{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 2;
+            background-color: blueviolet;
+        }
+        #roda{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="tela">
+        <div id="cima">
+            <div id="bola1"></div>
+            <div id="bola2"></div>
+            <div id="bola3"></div>
+        </div>
+        <div id="baixo">
+            <div id="ladoE">Navegação</div>
+            <div id="ladoD">
+                <div id="cab">Cabeçalho</div>
+                <div id="con">Conteudo</div>
+                <div id="roda">Rodape</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
